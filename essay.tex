@@ -20,24 +20,31 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
-
 \usepackage{hyperref}
+\hypersetup{
+        colorlinks,
+            linkcolor={red!50!black},
+                citecolor={blue!50!black},
+                    urlcolor={blue!80!black}
+                }
+
+
 \usepackage[portuguese,english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{float}
+%\usepackage{float}
 
-\usepackage{color} % for the notes
+%\usepackage{color} % for the notes
 \usepackage{xcolor}
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
-\usepackage{graphicx} % Required for including pictures
-\usepackage{wrapfig} % Allows in-line images
-\usepackage{tocloft}
-\usepackage{multirow}
+%\usepackage{graphicx} % Required for including pictures
+%\usepackage{wrapfig} % Allows in-line images
+%\usepackage{tocloft}
+%\usepackage{multirow}
 
 \usepackage{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Required for accented characters
-\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
-\usepackage{etoolbox}
+%\usepackage[T1]{fontenc} % Required for accented characters
+%\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+%\usepackage{etoolbox}
 \newcommand{\githubi}{Git\textsc{h}ub}
 \newcommand{\bdoh}{{\sc b}lack {\sc d}uck {\sc o}pen \textsc{hub}}
 \newcommand{\ohloh}{\textsc{o}hloh}
@@ -104,16 +111,9 @@
 \renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
 \renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
 
-\hypersetup{
-        colorlinks,
-            linkcolor={red!50!black},
-                citecolor={blue!50!black},
-                    urlcolor={blue!80!black}
-                }
-
 \usepackage{epigraph}
-\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
-\pretocmd{\section}{\addtocontents{toc}{\protect\vspace{-4mm}}}{}{}
+%\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+%\pretocmd{\section}{\addtocontents{toc}{\protect\vspace{-4mm}}}{}{}
 \renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
 \begin{flushright} % Right align
 {\LARGE\@title} % Increase the font size of the title
@@ -178,7 +178,7 @@ anthropological physics fundamentals} % Subtitle
 \vspace*{.6cm}
 
 \newpage
-\epigraph{A single dramatic incident involving a breach of privacy could produce a set of statutes, rules, and prohibitions that could strangle the nascent field of computational social science in its crib. What is necessary, now, is to produce a self-regulatory regime of procedures, technologies, and rules that reduce this risk but preserve most of the research potential.}{\cite{life}}
+\epigraph{A single dramatic incident involving a breach of privacy could produce a set of statutes, rules, and prohibitions that could strangle the nascent field of computational social science in its crib. What is necessary, now, is to produce a self-regulatory regime of procedures, technologies, and rules that reduce this risk but preserve most of the research potential.}{David Lazer, Alex (Sandy) Pentland, Lada Adamic, Sinan Aral, Albert Laszlo Barabasi, Devon Brewer, Nicholas Christakis, Noshir Contractor, James Fowler, Myron Gutmann, Tony Jebara, Gary King, Michael Macy, Deb Roy, and Marshall Van Alstyne~\cite{life}}
 
 \section*{What}
 The study of complex systems can be undertaken as a physics endeavor, specially if complex networks and statistics are into play.
@@ -233,8 +233,8 @@ the General Secretariat of the Republic Presidency (SG-PR) and UNDP for supporti
 research (contract 2013/00056, project BRA/12/018); the National Counsel of Technological 
 and Scientific Development (process 140860/2013-4, project 870336/1997-5,
 advisor: Prof. Dr. Osvaldo Novais de Oliveira Junior);
-to all David Lazer, Alex (Sandy) Pentland, Lada Adamic, Sinan Aral, Albert Laszlo Barabasi, Devon Brewer, Nicholas Christakis, Noshir Contractor, James Fowler, Myron Gutmann, Tony Jebara, Gary King, Michael Macy, Deb Roy, and Marshall Van Alstyne
-for the inspiring article~\cite{life} which encouraged this present essay.
+to all authors of the inspiring article~\cite{life} which encouraged this present essay
+and is the source of the epigraph.
 
 %\addcontentsline{toc}{subsection}{\ontologiaa: the \aab\ ontology}
 %\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
