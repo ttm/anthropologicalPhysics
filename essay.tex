@@ -1,0 +1,237 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage{hyperref}
+\usepackage[portuguese,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\usepackage{color} % for the notes
+\usepackage{xcolor}
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{tocloft}
+\usepackage{multirow}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+\usepackage{etoolbox}
+\newcommand{\githubi}{Git\textsc{h}ub}
+\newcommand{\bdoh}{{\sc b}lack {\sc d}uck {\sc o}pen \textsc{hub}}
+\newcommand{\ohloh}{\textsc{o}hloh}
+\newcommand{\php}{\textsc{php}}
+\newcommand{\twitter}{\textsc{t}witter}
+\newcommand{\facebook}{\textsc{f}acebook}
+\newcommand{\msn}{\textsc{msn}}
+\newcommand{\gchat}{\textsc{g}oogle \textsc{c}hat}
+\newcommand{\bash}{\textsc{b}ash}
+\newcommand{\python}{\textsc{p}ython}
+\newcommand{\django}{\textsc{d}jango}
+\newcommand{\curl}{c\textsc{url}}
+\newcommand{\firefox}{\textsc{f}irefox}
+\newcommand{\floss}{\textsc{floss}}
+\newcommand{\openoffice}{\textsc{o}pen\textsc{o}ffice}
+\newcommand{\puredata}{\textsc{p}uredata}
+\newcommand{\schema}{\textsc{s}chema.org}
+\newcommand{\wiki}{\textsc{w}iki}
+\newcommand{\nosql}{\textsc{n}o\textsc{sql}}
+\newcommand{\etherpad}{\textsc{e}therpad}
+\newcommand{\irc}{\textsc{irc}}
+\newcommand{\irci}{\textsc{Irc}}
+\newcommand{\ocd}{\textsc{ocd}}
+\newcommand{\participa}{\textsc{p}articipa.br}
+\newcommand{\httpb}{\textsc{http}}
+\newcommand{\foaf}{\textsc{foaf}}
+\newcommand{\ops}{\textsc{ops}}
+\newcommand{\sioc}{\textsc{sioc}}
+\newcommand{\gndo}{\textsc{gndo}}
+\newcommand{\html}{\textsc{html}}
+\newcommand{\ggg}{\textsc{ggg}}
+\newcommand{\opa}{\textsc{opa}}
+\newcommand{\obs}{\textsc{obs}}
+\newcommand{\vbs}{\textsc{vbs}}
+\newcommand{\lod}{\textsc{lod}}
+\newcommand{\nlp}{\textsc{nlp}}
+\newcommand{\sectionb}{\textsc{s}ection}
+\newcommand{\cn}{\textsc{cn}}
+\newcommand{\aab}{\textsc{aa}}
+\newcommand{\dc}{\textsc{d}ublin {\sc c}ore}
+\newcommand{\json}{\textsc{json}}
+\newcommand{\flask}{\textsc{f}lask}
+\newcommand{\aai}{\textsc{Aa}}
+\newcommand{\ontologiaa}{\textsc{o}ntologi\textsc{aa}}
+\newcommand{\ontologiaai}{\textsc{O}ntologi\textsc{aa}}
+\newcommand{\owl}{{\sc owl}}
+\newcommand{\www}{{\sc www}}
+\newcommand{\rdfi}{{\sc Rdf}}
+\newcommand{\mongodb}{{\sc m}ongo{\sc db}}
+\newcommand{\mysql}{{\sc m}y{\sc sql}}
+\newcommand{\rdf}{{\sc rdf}}
+%\newcommand{\paaineli}{P{\sc aa}inel}
+\newcommand{\paaineli}{P{\bf \sc aa}inel}
+\newcommand{\paainel}{p{\sc aa}inel}
+\newcommand{\gsd}{\textsc{gsd}}
+\newcommand{\ui}{\textsc{ui}}
+%\newcommand{\lmb}{\url{lab\textsc{M}acambira.sf.net}}
+\newcommand{\lm}{lab\textsc{M}acambira.sf.net}
+%\newcommand{\lm}{\url{labMacambira.sf.net}}
+
+
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\hypersetup{
+        colorlinks,
+            linkcolor={red!50!black},
+                citecolor={blue!50!black},
+                    urlcolor={blue!80!black}
+                }
+
+
+\pretocmd{\chapter}{\addtocontents{toc}{\protect\addvspace{5\p@}}}{}{}
+\pretocmd{\section}{\addtocontents{toc}{\protect\vspace{-4mm}}}{}{}
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{What are you and I?}\\ % Title
+%a natural collective focus\\on the collective being} % Subtitle
+anthropological physics fundamentals} % Subtitle
+
+\author{\textsc{Renato Fabbri} % Author
+\\{\textit{IFSC/USP, Participa.br/SG-PR, labMacambira.sf.net}}} % Institution
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%   ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+%
+%\begin{abstract}
+%\end{abstract}
+%
+%{
+%\selectlanguage{portuguese}
+%\begin{abstract}
+%
+%\end{abstract}
+%}
+
+\hspace*{3,6mm}\textit{Keywords:} anthropological physics, complex systems, complex networks, natural language processing, semantic web, social participation, ethnographic methods, \floss
+%, statistics % Keywords
+
+%\vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%   ESSAY BODY
+%----------------------------------------------------------------------------------------
+%\newpage
+%\tableofcontents
+
+\section*{What}
+The study of complex systems can be undertaken as a physics endeavor, specially if complex networks and statistics are into play.
+%The study of humans is, by excellence, anthropology. 
+When the complex system is constituted by people, diverse intriguing questions arise from viewpoints such as natural, ethic, moral and sociological. The ``anthropological physics'' is an approach to these scenarios that enables scientific research while resolving ethical and moral issues, in principle of course, by an open study of the self.
+
+\section*{How}
+If I annotate what I have been doing and what is happening in my environment, I might be able to use those annotations for my studies.
+Indeed, writing diaries is a common ethnographic method, used often in scientific research. Thereafter, it might be a reasonable choice
+to use my own annotations, be it in paper diaries or digital media~\cite{wolfram}. It is also reasonable that if a partner wants to use his annotations, or want me to use them, that they be used. There are some initiatives that receive this data, again evoking ethical and moral issues. A sweet spot was found in recent civil, research and academic efforts~\cite{pnud5,ensaio}, and has been called anthropological physics. General characteristics are:
+\begin{itemize}
+    \item Exposure of the researcher to the environment of interest, such as virtual social networks.
+    \item Use of the annotations from the exposure, be them activity logs, friendship or interaction networks, textual contents, etc.
+    \item When necessary, expansion of observations to open datasets or data donated by partners.
+    \item All resources are kept as open as possible, including  software, data, writings.
+\end{itemize}
+
+
+%\section{\aai\ concept}\label{sec:start}
+\subsection*{Acknowledgments}
+Massimo, Marília, Deborah, Rita Wu, Juliana de Souza.
+Ricardo Fabbri e Vilson Vieira, e todo LM.
+SGPR, PNUD/ONU.
+Barabasi e todos os autores do artigo X, pois foi um incentivo para
+esta escrita.
+CNPq, Chu e Luciano.
+
+%\addcontentsline{toc}{subsection}{\ontologiaa: the \aab\ ontology}
+%\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
+%\begin{center}
+%\includegraphics[width=0.38\textwidth]{telao1.png}
+%\end{center}
+%\caption{\small Telão para streaming de estruturas sociais, usado no \#arenaNETmundial, \#ocupaGOV e outras ocasiões. Tela com rede de retweets e relacionamento via hashtag e vocabulário. Atualizada a cada 10 segundos com os relacionamentos implicados pelos dos tweets mais recentes.}\label{fig:telao}
+%\end{wrapfigure}
+
+%\begin{figure}[H]
+%  \centering
+%    \includegraphics[width=.7\textwidth]{telao2.png}
+%  \caption{\small Telão para streaming de estruturas sociais, usado no \#arenaNETmundial, \#ocupaGOV e outras ocasiões. Tela com relacionamentos de hashtags e vocabulário. Atualizada a cada 10 segundos com conteúdo dos tweets mais recentes.}\label{fig:telao2}
+%\end{figure}
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%   BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\bibliographystyle{unsrt}
+%\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
+\bibliography{essay}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
